@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+.card-container {
+  font-family: "Gloria Hallelujah";
+  cursor: pointer;
+  padding: 24px;
+  width: 240px;
+  height: 360px;
+  position: relative;
+  transition: 0.3s;
+  perspective: 600px;
+}
+
+.card {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.back {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcandyboulevard.com%2Fwp-content%2Fuploads%2Fsites%2F3%2F2020%2F01%2FA1Q3MPEZqgL._SL1500_.jpg&f=1&nofb=1");
+  background-size:cover; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color:#323232;
+}
+
+.card span {
+  font-size: 8rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}

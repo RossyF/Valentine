@@ -1,0 +1,57 @@
+.root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .confetti{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30px;
+    height: 30px;
+    background:pink;
+    border-radius: 50%;
+    animation:confetti 5s ease-out infinite;
+    position: absolute;
+    top:-100px;
+  
+    left:50%;
+    animation-delay: calc(.5s * var(--i));
+  }
+  
+  .explosion {
+    animation: explode 0.5s ease-out 1;
+    animation-delay: calc(0.1s * var(--i));
+  }
+  
+  @keyframes confetti {
+    0% {
+      transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+    }
+    25% {
+      transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+    }
+    50% {
+      transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh);
+    }
+    75% {
+      transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh);
+    }
+    100% {
+      transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
+    }
+  }
+  
+  @keyframes explode {
+    0% {
+      transform: translateY(0);
+      left: 50vw;
+      bottom: 0;
+      top: unset;
+    }
+    100% {
+      transform: translateY(-200vh);
+      display: none;
+    }
+  }
